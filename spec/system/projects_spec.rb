@@ -32,7 +32,7 @@ RSpec.describe 'Projects', type: :system do
         fill_in('comment_content', with: 'An example comment')
         click_on('Post')
 
-        within '#project-comments' do
+        within '#activity-comments' do
           expect(page).to have_content('An example comment')
           expect(page).to have_content(user.name)
           expect(page).to have_content('less than a minute ago')
@@ -41,7 +41,7 @@ RSpec.describe 'Projects', type: :system do
     end
 
     context 'status changes' do
-      it 'allows status to be changed' do
+      it 'allows status to be changed and shows status changes on activity feed' do
         within '#current-status' do
           expect(page).to have_content('Draft')
         end
@@ -52,6 +52,10 @@ RSpec.describe 'Projects', type: :system do
         within '#current-status' do
           expect(page).to have_content('Complete')
         end
+
+        expect(page).to have_content('Status changed from draft to complete')
+        expect(page).to have_content(user.name)
+        expect(page).to have_content('less than a minute ago')
       end
     end
   end

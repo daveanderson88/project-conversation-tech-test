@@ -1,9 +1,11 @@
 class ProjectsController < ApplicationController
+  include Activities
+
   helper_method :projects, :project, :comment
 
   def index; end
 
-  def show;  end
+  def show; end
 
   def update
     project.update!(project_params)
