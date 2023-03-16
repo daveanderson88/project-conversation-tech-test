@@ -16,5 +16,5 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :projects, only: %i[index]
+  resources :projects, only: %i[index show]
 end
