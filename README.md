@@ -99,5 +99,5 @@ A: No.
 
 #### Status changes
 
-- Status attribute and project audit history
+- ~~Status attribute and project audit history~~
 - Display of status changes within activity pane

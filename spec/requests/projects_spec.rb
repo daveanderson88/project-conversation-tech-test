@@ -40,4 +40,24 @@ RSpec.describe 'Projects', type: :request do
       end
     end
   end
+
+  describe 'update' do
+    let(:project) { create :project }
+
+    context 'unauthenticated' do
+      it 'returns http redirect' do
+        put project_path(project), params: { project: { status: :draft } }
+        expect(response).to have_http_status(302)
+      end
+    end
+
+    context 'authenticated' do
+      before { login_as user }
+
+      it 'returns http success' do
+        put project_path(project), params: { project: { status: :draft } }
+        expect(response).to have_http_status(302)
+      end
+    end
+  end
 end

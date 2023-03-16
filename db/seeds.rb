@@ -20,10 +20,10 @@ User.create!(
 Project.create!(
   [
     { name: 'Battersea Power Station',
-      description: 'Battersea Power Station is a decommissioned Grade II* listed coal-fired power station.' },
+      description: 'Battersea Power Station is a decommissioned Grade II* listed coal-fired power station.', status: :draft },
     { name: 'Kings Cross',
-      description: 'Kings Cross is one of the largest and most successful redevelopments in London. Over the past 20 years, what was an underused industrial site has been transformed and rejuvenated with new streets, squares and parks, homes, shops, offices, galleries, bars, restaurants, schools, and even a university.' },
+      description: 'Kings Cross is one of the largest and most successful redevelopments in London. Over the past 20 years, what was an underused industrial site has been transformed and rejuvenated with new streets, squares and parks, homes, shops, offices, galleries, bars, restaurants, schools, and even a university.', status: :active },
     { name: 'Crossrail',
-      description: 'Crossrail is a railway construction project mainly in central London. Its aim is to provide a high-frequency hybrid commuter rail and rapid transit system crossing the capital from suburbs.' }
+      description: 'Crossrail is a railway construction project mainly in central London. Its aim is to provide a high-frequency hybrid commuter rail and rapid transit system crossing the capital from suburbs.', status: :complete }
   ]
 )
