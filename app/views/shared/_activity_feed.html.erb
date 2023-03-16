@@ -1,10 +1,10 @@
-<div id="project-comments">
-  <% project.comments.each do |comment| %>
+<div id="activity-comments">
+  <% activities.each do |activity| %>
     <div class="overflow-hidden bg-white shadow sm:rounded-l my-4">
       <div class="px-2 py-2 sm:px-6">
-        <p class="font-bold"><%= comment.content %></p>
+        <p class="font-bold"><%= activity[:message] %></p>
         <small>
-          By <%= comment.user.name %>, <%= time_ago_in_words(comment.created_at) %> ago.
+          By <%= activity[:name] %>, <%= time_ago_in_words(activity[:time]) %> ago.
         </small>
       </div>
     </div>

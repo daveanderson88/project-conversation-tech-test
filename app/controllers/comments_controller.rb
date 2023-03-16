@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  include Activities
+
   helper_method :project, :comment
 
   def new; end
