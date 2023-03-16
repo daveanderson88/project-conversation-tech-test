@@ -8,7 +8,7 @@ RSpec.describe 'Homepages', type: :system do
   it 'displays the homepage when logged in' do
     visit root_path
 
-    expect(page).not_to have_content('Rails version')
+    expect(page).not_to have_content('Projects')
 
     click_on('Log in')
     expect(page).to have_content('Invalid Email or password.')
@@ -16,6 +16,6 @@ RSpec.describe 'Homepages', type: :system do
     fill_in('Email', with: user.email)
     fill_in('Password', with: user.password)
     click_on('Log in')
-    expect(page).to have_content('Rails version')
+    expect(page).to have_content('Projects')
   end
 end
