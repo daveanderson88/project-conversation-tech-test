@@ -85,7 +85,7 @@ A: No.
 #### Users & login
 
 - ~~Install Devise gem~~
-- Root pages for authenticated and unauthenticated users
+- ~~Root pages for authenticated and unauthenticated users~~
 
 #### Projects
 
