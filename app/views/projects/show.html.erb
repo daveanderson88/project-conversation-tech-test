@@ -3,3 +3,7 @@
 <p>
   <%= project.description %>
 </p>
+
+<%= turbo_frame_tag "activity_feed" do %>
+  <%= render "shared/activity_feed" %>
+<% end %>

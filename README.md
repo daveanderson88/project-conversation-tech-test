@@ -97,8 +97,8 @@ A: No.
 
 #### Comments
 
-- Comment model with new & create actions
-- Display of comments within activity pane
+- ~~Comment model with new & create actions~~
+- ~~Display of comments within activity pane~~
 
 #### Status changes
 
