@@ -12,7 +12,9 @@ Rails.application.routes.draw do
     end
 
     authenticated :user do
-      root 'rails/welcome#index'
+      root 'projects#index'
     end
   end
+
+  resources :projects, only: %i[index]
 end
