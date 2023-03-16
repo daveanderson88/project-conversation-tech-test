@@ -20,4 +20,24 @@ RSpec.describe 'Projects', type: :request do
       end
     end
   end
+
+  describe 'show' do
+    let(:project) { create :project }
+
+    context 'unauthenticated' do
+      it 'returns http redirect' do
+        get project_path(project)
+        expect(response).to have_http_status(302)
+      end
+    end
+
+    context 'authenticated' do
+      before { login_as user }
+
+      it 'returns http success' do
+        get project_path(project)
+        expect(response).to have_http_status(:success)
+      end
+    end
+  end
 end

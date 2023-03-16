@@ -93,7 +93,7 @@ A: No.
 #### Projects
 
 - ~~Project model with index page~~
-- Basic project show page
+- ~~Basic project show page~~
 
 #### Comments
 

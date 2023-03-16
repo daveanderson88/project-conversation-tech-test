@@ -3,7 +3,7 @@
 <% projects.each do |project| %>
   <div class="overflow-hidden bg-white shadow sm:rounded-l my-4">
     <div class="px-4 py-5 sm:px-6">
-      <%= link_to project.name %>
+      <%= link_to project.name, project_path(project) %>
     </div>
   </div>
 <% end %>
