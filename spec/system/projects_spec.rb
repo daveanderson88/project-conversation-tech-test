@@ -6,10 +6,23 @@ RSpec.describe 'Projects', type: :system do
   let(:user) { create :user }
   let!(:project) { create :project }
 
-  it 'displays a list of projects' do
-    login_as user
-    visit root_path
+  before { login_as user }
 
-    expect(page).to have_link(project.name)
+  context 'index' do
+    it 'displays clickable project names' do
+      visit root_path
+
+      click_on(project.name)
+      expect(current_path).to eq project_path(project)
+    end
+  end
+
+  context 'show' do
+    it 'displays project details' do
+      visit project_path(project)
+
+      expect(page).to have_content(project.name)
+      expect(page).to have_content(project.description)
+    end
   end
 end
