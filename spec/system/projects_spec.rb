@@ -39,5 +39,20 @@ RSpec.describe 'Projects', type: :system do
         end
       end
     end
+
+    context 'status changes' do
+      it 'allows status to be changed' do
+        within '#current-status' do
+          expect(page).to have_content('Draft')
+        end
+
+        select('Complete', from: 'project_status')
+        click_on('Update')
+
+        within '#current-status' do
+          expect(page).to have_content('Complete')
+        end
+      end
+    end
   end
 end
