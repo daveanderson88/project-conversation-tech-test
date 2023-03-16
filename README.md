@@ -79,7 +79,7 @@ A: No.
 #### Planning and setup
 
 - ~~Story planning~~
-- New rails project
+- ~~New rails project~~
 - Install testing gems (RSpec, Factorybot)
 
 #### Users & login
